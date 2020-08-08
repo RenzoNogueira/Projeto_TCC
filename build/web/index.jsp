@@ -18,7 +18,7 @@
     <body>
         <header>
             <nav>
-                <%@ include file="banner.jsp" %>
+                <%--<%@ include file="banner.jsp" %>--%>
                 <%@ include file="menu.jsp" %>
             </nav>
         </header>

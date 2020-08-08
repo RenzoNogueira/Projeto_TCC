@@ -13,7 +13,7 @@ import java.sql.DriverManager;
  */
 public class DataBaseDAO {
     
-    public final String URL="jdbc:mysql://localhost:3306/aulajava";
+    public final String URL="jdbc:mysql://localhost:3306/auton_db";
     public final String USER="root";
     public final String SENHA="";
     
