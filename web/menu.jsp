@@ -10,12 +10,12 @@
 	<nav class="slide">
 		<ul>
 			<li><a href="#" class="active">HOME</a></li>
-			<li><a href="#">LINK TWO</a></li>
-			<li><a href="#">LINK THREE</a></li>
-			<li><a href="#">LINK FOUR</a></li>
-			<li><a href="#">LINK FIVE</a></li>
-			<li><a href="#">LINK SIX</a></li>
-			<li><a href="#">LINK SEVEN</a></li>
+			<li><a href="#">Perfil</a></li>
+			<li><a href="#">Menu</a></li>
+			<li><a href="#">Usuário</a></li>
+			<li><a href="#">Vendas</a></li>
+			<li><a href="#">Clientes</a></li>
+			<li><a href="#">Relatorios</a></li>
 		</ul>
 	</nav>
 	
