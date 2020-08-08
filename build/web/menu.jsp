@@ -4,7 +4,7 @@
 		<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
 			<li></li><li></li><li></li>
 		</ul>
-		<h1>Trunk.js</h1>
+		<h1>Auton</h1>
 	</header>
 
 	<nav class="slide">
@@ -18,19 +18,5 @@
 			<li><a href="#">Relatorios</a></li>
 		</ul>
 	</nav>
-	
-	<div class="content slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
-		<ul class="responsive">
-			<li class="header-section">
-				<p class="placefiller">HEADER</p>
-			</li>
-			<li class="body-section">
-				<p class="placefiller">BODY</p>
-			</li>
-			<li class="footer-section">
-				<p class="placefiller">FOOTER</p>
-			</li>
-		</ul>
-	</div>
-	
+		
 </div>

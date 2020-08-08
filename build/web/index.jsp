@@ -32,11 +32,25 @@
     </head>
 
     <body>
-        <header>
+        
                 <%--<%@ include file="banner.jsp" %>--%>
                 <%@ include file="menu.jsp" %>
-        </header>
-            <div><h1>Hello World</h1></div>
+                
+                
+                <div class="content slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul class="responsive">
+			<li class="header-section">
+				<p class="placefiller">HEADER "Olá Mundo!!!"</p>
+			</li>
+			<li class="body-section">
+				<p class="placefiller">BODY</p>
+			</li>
+			<li class="footer-section">
+				<p class="placefiller">FOOTER</p>
+			</li>
+		</ul>
+	</div>
+                
         <script src="frameworks/jquery/jquery.min.js"></script>
         <script src="frameworks/bootstrap/js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
