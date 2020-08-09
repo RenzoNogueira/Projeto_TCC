@@ -24,8 +24,6 @@
         .form {
             width: 50%;
             border: 1px solid gray;
-            padding: 2em;
-            margin-top: 3em;
         }
     </style>
 
@@ -34,11 +32,11 @@
 <body>
     <header>
         <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
             <a class="navbar-brand" href="">Auton</a>
         </nav>
     </header>
-    <div class="form mx-auto">
+    <div class="form mx-auto p-5 m-5">
         <form>
             <div class="form-group">
                 <label for="name_user">Nome de usuário</label>
