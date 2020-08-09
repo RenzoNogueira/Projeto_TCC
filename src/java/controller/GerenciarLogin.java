@@ -37,7 +37,7 @@ public class GerenciarLogin extends HttpServlet {
             throws ServletException, IOException {
         
         request.getSession().removeAttribute("ulogado");
-        response.sendRedirect("form_login.jsp");
+        response.sendRedirect("login.jsp");
     }
 
     /** 
@@ -94,7 +94,7 @@ public class GerenciarLogin extends HttpServlet {
         try{
             HttpSession sessao = request.getSession();
             if(sessao.getAttribute("ulogado")==null){
-                response.sendRedirect("form_login.jsp");
+                response.sendRedirect("login.jsp");
             }else{
                 String uri = request.getRequestURI();
                 String queryString = request.getQueryString();
@@ -104,7 +104,7 @@ public class GerenciarLogin extends HttpServlet {
                 u = (Usuario)request.getSession().getAttribute("ulogado");
                 if(u==null){
                     sessao.setAttribute("mensagem", "Você não está autenticado");
-                    response.sendRedirect("form_login.jsp");
+                    response.sendRedirect("login.jsp");
                 }else{
                     boolean possuiAcesso=false;
                     for(Menu m: u.getPerfil().getMenus()){

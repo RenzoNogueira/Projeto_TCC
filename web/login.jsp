@@ -36,7 +36,7 @@
             <a class="navbar-brand" href="">Auton</a>
         </nav>
     </header>
-    <div class="form mx-auto p-5 m-5">
+    <div class="form mx-auto p-5 m-5 shadow">
         <form>
             <div class="form-group">
                 <label for="name_user">Nome de usuário</label>
@@ -45,6 +45,7 @@
             <div class="form-group">
                 <label for="password_user">Senha</label>
                 <input type="password" class="form-control" id="password_user">
+                <span class="float-right"><a href="#">Esqueci a senha</a></span>
             </div>
             <button type="submit" class="btn btn-primary">Executar</button>
         </form>
