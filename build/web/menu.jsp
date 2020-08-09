@@ -1,22 +1,38 @@
-<div class="container">
-
-	<header class="slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
-		<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
-			<li></li><li></li><li></li>
-		</ul>
-		<h1>Auton</h1>
+<div>
+	<header>
+		<!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="">Auton</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+				aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse bg-light" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Perfil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Usu√°rio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Vendas</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Clientes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Relatorios</a>
+					</li>
+				</ul>
+				<!-- <form class="form-inline mt-2 mt-md-0">
+					<input class="form-control mr-sm-2" type="text" placeholder="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form> -->
+			</div>
+		</nav>
 	</header>
-
-	<nav class="slide">
-		<ul>
-			<li><a href="#" class="active">HOME</a></li>
-			<li><a href="#">Perfil</a></li>
-			<li><a href="#">Menu</a></li>
-			<li><a href="#">Usu·rio</a></li>
-			<li><a href="#">Vendas</a></li>
-			<li><a href="#">Clientes</a></li>
-			<li><a href="#">Relatorios</a></li>
-		</ul>
-	</nav>
-		
 </div>
