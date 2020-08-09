@@ -1,10 +1,10 @@
-<%@page import="model.Usuario"%>
+<%--<%@page import="model.Usuario"%>
 <%@page import="controller.GerenciarLogin"%>
 <%@taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     Usuario ulogado = GerenciarLogin.verificarAcesso(request, response);
     request.setAttribute("ulogado", ulogado);
-%>
+%>--%>
 <div>
     <header>
         <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
