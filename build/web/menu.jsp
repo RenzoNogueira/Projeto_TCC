@@ -17,22 +17,25 @@
             <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.jsp">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Perfil</a>
+                        <a class="nav-link" href="usuarios.jsp">Usuário</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Usuário</a>
+                        <a class="nav-link" href="vendas.jsp">Vendas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Vendas</a>
+                        <a class="nav-link" href="clientes.jsp">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Clientes</a>
+                        <a class="nav-link" href="fornecedores.jsp">Fornecedores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Relatorios</a>
+                        <a class="nav-link" href="produtos.jsp">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="relatorios.jsp">Relatórios</a>
                     </li>
                 </ul>
                 <!-- <form class="form-inline mt-2 mt-md-0">

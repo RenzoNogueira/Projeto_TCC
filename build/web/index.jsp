@@ -9,7 +9,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>Exemplo de aplicação erb em Java</title>
+    <title>Auton Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
     <meta name="apple-mobile-web-app-capable" content="yes">
