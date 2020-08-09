@@ -20,10 +20,13 @@
                         <a class="nav-link" href="index.jsp">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="usuarios.jsp">Usuário</a>
+                        <a class="nav-link" href="usuarios.jsp">Usuarios</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="vendas.jsp">Vendas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vendas.jsp">Pedidos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="clientes.jsp">Clientes</a>
@@ -35,7 +38,10 @@
                         <a class="nav-link" href="produtos.jsp">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="relatorios.jsp">Relatórios</a>
+                        <a class="nav-link" href="produtos.jsp">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="relatorios.jsp">Relatorios</a>
                     </li>
                 </ul>
                 <!-- <form class="form-inline mt-2 mt-md-0">
