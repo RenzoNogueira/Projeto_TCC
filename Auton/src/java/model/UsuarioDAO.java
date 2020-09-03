@@ -37,9 +37,9 @@ public class UsuarioDAO extends DataBaseDAO {
             u.setStatus(rs.getInt("u.status"));
 
             Perfil p = new Perfil();
-            p.setIdPefil(rs.getInt("u.idPerfil"));
-            p.setIdNome(rs.getString("u.nome"));
-            p.setPefil(p);
+            p.setIdPerfil(rs.getInt("u.idPerfil"));
+            p.setNome(rs.getString("u.nome"));
+            u.setPerfil(p);
             lista.add(u);
         }
 
