@@ -39,15 +39,15 @@ public class PerfilDAO extends DataBaseDAO{
             String sql;
             this.conectar();//abre a conexao
             if(p.getIdPerfil()==0){
-                sql = "INSERT INTO perfil(perfil) VALUES (?)";
+                sql = "INSERT INTO perfil(nome) VALUES (?)";
             }else{
-                sql = "UPDATE perfil SET perfil=? WHERE idperfil=?";
+                sql = "UPDATE perfil SET nome=? WHERE idPerfil=?";
             }
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1,p.getNome());
-            
-            if(p.getIdPerfil()>0)
+            if(p.getIdPerfil()>0){
                 pstm.setInt(2,p.getIdPerfil());
+            }
             pstm.execute();
             this.desconectar();
             return true;
@@ -57,12 +57,12 @@ public class PerfilDAO extends DataBaseDAO{
             return false;
         }
 }
-     public Perfil getCarregaPorId(int idperfil) throws Exception{
+     public Perfil getCarregaPorId(int idPerfil) throws Exception{
         Perfil p = new Perfil();
-        String sql ="SELECT * FROM perfil WHERE idperfil=?";
+        String sql ="SELECT * FROM perfil WHERE idPerfil=?";
         this.conectar();
         PreparedStatement pstm = conn.prepareStatement(sql);
-        pstm.setInt(1,idperfil);
+        pstm.setInt(1,idPerfil);
         ResultSet rs = pstm.executeQuery();
         if(rs.next()){
             p.setIdPerfil(rs.getInt("idPerfil"));
@@ -75,7 +75,7 @@ public class PerfilDAO extends DataBaseDAO{
     public boolean excluir(Perfil p){
         try{
             this.conectar();
-            String sql = "DELETE FROM perfil WHERE idperfil=?";
+            String sql = "DELETE FROM perfil WHERE idPerfil=?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1,p.getIdPerfil());
             pstm.execute();

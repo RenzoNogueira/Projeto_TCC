@@ -5,7 +5,24 @@
         <data xmlns="http://www.netbeans.org/ns/web-project/3">
             <name>Auton</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
-            <web-module-libraries/>
+            <web-module-libraries>
+                <library dirs="200">
+                    <file>${libs.jsf20.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${libs.jstl11.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${libs.MySQLDriver.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${libs.jstl.classpath}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+            </web-module-libraries>
             <web-module-additional-libraries/>
             <source-roots>
                 <root id="src.dir" name="Pacotes de Códigos-fonte"/>
@@ -14,8 +31,5 @@
                 <root id="test.src.dir" name="Pacotes de Teste"/>
             </test-roots>
         </data>
-        <libraries xmlns="http://www.netbeans.org/ns/ant-project-libraries/1">
-            <definitions>.\lib\nblibraries.properties</definitions>
-        </libraries>
     </configuration>
 </project>

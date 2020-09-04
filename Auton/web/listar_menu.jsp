@@ -1,7 +1,4 @@
 
-
-<%@page import="model.PerfilDAO"%>
-<%@page import="model.Perfil"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -17,8 +14,8 @@
         <title>JSP Page</title>
         <script type="text/javascript">
             function confirmarExclusao(id,nome){
-                    if(confirm('Deseja realmete excluir o perfil '+nome+ ' ?')){
-                        location.href='gerenciar_perfil.do?acao=excluir&idPerfil='+id;
+                    if(confirm('Deseja realmete excluir o menu '+nome+ ' ?')){
+                        location.href='gerenciar_menu.do?acao=excluir&idMenu='+id;
                     }
                 
             }
@@ -28,43 +25,54 @@
         <div class="container">
             <%@include file="banner.jsp" %>
             <%@include file="menu.jsp" %>
-             <h1>Lista de Perfis</h1>
-             <a href="form_perfil.jsp" class="btn btn-primary">
+             <h1>Lista de Menus</h1>
+             <a href="form_menu.jsp" class="btn btn-primary">
                  Novo Cadastro
              </a>
              <table class="table table-hover table-striped 
-                    table-bordered display" id="listarPerfil">
+                    table-bordered display" id="listarMenu">
                  <thead>
                      <tr>
                          <th>ID</th>
-                         <th>Perfil</th>
+                         <th>Nome Menu</th>
+                         <th>Link</th>
+                         <th>Icone</th>
+                         <th>Exibir</th>
                          <th>Opções</th>
                      </tr>
                  </thead>
                  <tfoot>
                      <tr>
                          <th>ID</th>
-                         <th>Perfil</th>
+                         <th>Nome Menu</th>
+                         <th>Link</th>
+                         <th>Icone</th>
+                         <th>Exibir</th>
                          <th>Opções</th>
                      </tr>
                  </tfoot>
-                 <jsp:useBean class="model.PerfilDAO" id="pDAO"/>
+                 <jsp:useBean class="model.MenuDAO" id="mDAO"/>
                  <tbody>
-                 <c:forEach var="p" items="${pDAO.lista}">
+                 <c:forEach var="m" items="${mDAO.lista}">
                  
                  <tr>
-                     <td>${p.idPerfil}</td>
-                     <td>${p.nome}</td>
+                     <td>${m.idMenu}</td>
+                     <td>${m.nome}</td>
+                     <td>${m.link}</td>
+                     <td>${m.icone}</td>
                      <td>
-                         <a class="btn btn-primary" href="gerenciar_perfil.do?acao=alterar&idPerfil=${p.idPerfil}">
+                         <c:if test="${m.exibir==1}"> Sim </c:if>
+                         <c:if test="${m.exibir==2}"> Não </c:if>
+                         
+                     </td>
+                     <td>
+                         <a class="btn btn-primary" href="gerenciar_menu.do?acao=alterar&idMenu=${m.idMenu}">
                              <i class="glyphicon glyphicon-pencil"></i>
                          </a>
-                         <button class="btn btn-danger" onclick="confirmarExclusao(${p.idPerfil},'${p.nome}')">
+                         <button class="btn btn-danger" onclick="confirmarExclusao(${m.idMenu},'${m.nome}')">
                              <i class="glyphicon glyphicon-trash"></i>
                          </button>
-                             <a class="btn btn-default" href="gerenciar_menu_perfil.do?acao=gerenciar&idPerfil=${p.idPerfil}">
-                                 <i class="glyphicon">Acessos</i>
-                             </a>    
+                                
                      </td>
                  </tr>
                  
@@ -76,7 +84,7 @@
     <script type="text/javascript" src="datatables/jquery.dataTables.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $("#listarPerfil").dataTable({
+            $("#listarMenu").dataTable({
                 "bJQueryUI": true,
                 "oLanguage": {
                     "sProcessing": "Processando...",

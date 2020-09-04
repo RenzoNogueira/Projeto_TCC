@@ -5,6 +5,7 @@
  */
 package controller;
 
+import model.MenuDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -12,15 +13,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Perfil;
-import model.PerfilDAO;
+import model.Menu;
 
 /**
  *
  * @author ygor-
  */
-public class GerenciarPerfil extends HttpServlet {
+public class GerenciarMenu extends HttpServlet {
 
+   
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -36,43 +37,44 @@ public class GerenciarPerfil extends HttpServlet {
             throws ServletException, IOException {
         
         PrintWriter out = response.getWriter();
-        String mensagem = "";
+        String mensagem ="";
         
         String acao = request.getParameter("acao");
-        String idPerfil = request.getParameter("idPerfil");
+        String idMenu = request.getParameter("idMenu");
         
-       Perfil p = new Perfil();
-        
+                
+        Menu m = new Menu();
         try{
-            PerfilDAO pDAO = new PerfilDAO();
-            if(acao.equals("alterar")){
-              p = pDAO.getCarregaPorId(Integer.parseInt(idPerfil));
-              if(p.getIdPerfil()>0){
-                 RequestDispatcher disp = getServletContext().getRequestDispatcher("/form_perfil.jsp");
-                 request.setAttribute("perfil", p);
-                 disp.forward(request, response);
-              } else {
-                 mensagem = "Perfil não encontrado";
-              }       
-            }
-            if(acao.equals("excluir")){                 
-                p.setIdPerfil(Integer.parseInt(idPerfil));
-                if(pDAO.excluir(p)){
+            MenuDAO mDAO = new MenuDAO();
+            if(acao.equals("alterar")){  
+                m = mDAO.getCarregaPorId(Integer.parseInt(idMenu));
+                if(m.getIdMenu()>0){
+                    RequestDispatcher disp = getServletContext().getRequestDispatcher("/form_menu.jsp");
+                    request.setAttribute("menu", m);
+                    disp.forward(request, response);
+                }else{
+                    mensagem = "Menu não encontrado";
+              }  
+                
+            }  
+            if(acao.equals("excluir")){     
+                m.setIdMenu(Integer.parseInt(idMenu));
+                if(mDAO.excluir(m)){
                     mensagem = "Excluído com sucesso!";
                 }else{
                     mensagem = "Erro ao excluir!";
-                }
+             }
+                
             }
         }catch(Exception e){
             out.print(e);
-            mensagem = "Erro ao executar";
-    }
+            mensagem = "Erro ao executar o comando";
+        }
         out.println("<script type='text/javascript'>");
-        out.println("alert('"+mensagem+"');");
-        out.println("location.href='listar_perfil.jsp';");
+        out.println("alert('"+mensagem+"')");
+        out.println("location.href='listar_menu.jsp';");
         out.println("</script>");
-  }
-   
+    }
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -87,21 +89,31 @@ public class GerenciarPerfil extends HttpServlet {
             throws ServletException, IOException {
         
         PrintWriter out = response.getWriter();
-        String idPerfil = request.getParameter("idPerfil");
+        
+        String idMenu = request.getParameter("idMenu");
         String nome = request.getParameter("nome");
+        String link = request.getParameter("link");
+        String icone = request.getParameter("icone");
+        String exibir = request.getParameter("exibir");
+        
         String mensagem = "";
         
-        Perfil p = new Perfil();
-        if(!idPerfil.isEmpty())
-            p.setIdPerfil(Integer.parseInt(idPerfil));
-        
+        Menu m = new Menu();
+                      
         try{
-            PerfilDAO pDAO = new PerfilDAO();
-            if(nome.equals("")||nome.isEmpty()){
+            MenuDAO mDAO = new MenuDAO();
+            if(!idMenu.isEmpty()){
+                m.setIdMenu(Integer.parseInt(idMenu));
+            }
+            
+            if(nome.equals("")||link.isEmpty()||exibir.equals("")){
                 mensagem = "Campos obrigatórios deverão ser preenchidos";
             }else{
-                p.setNome(nome);
-                if(pDAO.gravar(p)){
+                m.setNome(nome);
+                m.setLink(link);
+                m.setIcone(icone);
+                m.setExibir(Integer.parseInt(exibir));
+                if(mDAO.gravar(m)){
                     mensagem = "Gravado com sucesso";
                 }else{
                     mensagem = "Erro ao gravar no banco";
@@ -113,19 +125,19 @@ public class GerenciarPerfil extends HttpServlet {
             mensagem = "Erro ao executar o comando";
         }
         out.println("<script type='text/javascript'>");
-        out.println("alert('"+mensagem+"');");
-        out.println("location.href='listar_perfil.jsp';");
+        out.println("alert('"+mensagem+"')");
+        out.println("location.href='listar_menu.jsp';");
         out.println("</script>");
+        
         
     }
     }
-    
 
     /**
      * Returns a short description of the servlet.
      *
      * @return a String containing servlet description
      */
-    
+
 
 

@@ -4,9 +4,17 @@
         <servlet-name>GerenciarPerfil</servlet-name>
         <servlet-class>controller.GerenciarPerfil</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GerenciarMenu</servlet-name>
+        <servlet-class>controller.GerenciarMenu</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GerenciarPerfil</servlet-name>
-        <url-pattern>/GerenciarPerfil</url-pattern>
+        <url-pattern>/gerenciar_perfil.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GerenciarMenu</servlet-name>
+        <url-pattern>/gerenciar_menu.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

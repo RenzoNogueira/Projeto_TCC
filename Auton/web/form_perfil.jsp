@@ -16,13 +16,11 @@
             <%@include file="menu.jsp" %>
              <h1>Novo Cadastro</h1>
              <form action="gerenciar_perfil.do" method="POST">
-                 <input type="hidden" name="idperfil" id="idPerfil" value="${perfil.idPerfil}"/>
+                 <input type="hidden" name="idPerfil" id="idPerfil" value="${perfil.idPerfil}"/>
                  <div class="row">
                      <div class="form-group col-sm-8">
                          <label for="perfil" class="control-label">Nome Perfil</label>
-                         <input type="text" class="form-control" 
-                                id="nome" name="nome" required="" 
-                                maxlength="45" value="${perfil.nome}"/>
+                         <input type="text" class="form-control" id="nome" name="nome" required="" maxlength="45" value="${perfil.nome}"/>
                      </div>    
                  </div>
                  <div class="row">
