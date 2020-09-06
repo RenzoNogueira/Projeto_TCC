@@ -7,10 +7,10 @@ package model;
 
 /**
  *
- * @author Renzo Renzo Nogueira.
+ * @author pfela
  */
 public class Usuario {
-
+    
     private int idUsuario;
     private String nome;
     private String login;
@@ -82,5 +82,7 @@ public class Usuario {
     public String toString() {
         return "Usuario{" + "nome=" + nome + '}';
     }
-
+    
+    
+    
 }

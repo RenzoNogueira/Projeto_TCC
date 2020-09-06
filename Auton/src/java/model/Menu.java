@@ -7,9 +7,10 @@ package model;
 
 /**
  *
- * @author ygor-
+ * @author pfela
  */
 public class Menu {
+    
     private int idMenu;
     private String nome;
     private String icone;
@@ -69,7 +70,7 @@ public class Menu {
 
     @Override
     public String toString() {
-        return "Menu{" + "idMenu=" + idMenu + ", nome=" + nome + ", icone=" + icone + ", link=" + link + ", exibir=" + exibir + '}';
+        return "Menu{" + "nome=" + nome + '}';
     }
     
     

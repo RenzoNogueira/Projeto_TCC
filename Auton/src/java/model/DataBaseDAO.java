@@ -1,5 +1,6 @@
-                                                                                                                                                                                                                                                                                                                                                                                     /*
- * To change this template, choose Tools | Templates
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package model;
@@ -9,14 +10,13 @@ import java.sql.DriverManager;
 
 /**
  *
- * @author Administrador
+ * @author pfela
  */
 public class DataBaseDAO {
     
-    public final String URL="jdbc:mysql://localhost:3306/banco_auton";
+    public final String URL="jdbc:mysql://localhost:3308/aulajava";
     public final String USER="root";
-    public final String SENHA="";
-    
+    public final String SENHA = "";
     public Connection conn;
     
     public DataBaseDAO() throws Exception{
