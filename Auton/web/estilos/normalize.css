@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05/09/2020, 23:53:33
+    Author     : Renzo
+*/
+
+  @media (max-width: 992px) {
+      .navbar-collapse {
+          position: fixed;
+          top: 50px;
+          left: 0;
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-bottom: 15px;
+          width: 75%;
+          height: 100%;
+      }
+
+      .navbar-collapse.collapsing {
+          left: -75%;
+          transition: height 0s ease;
+      }
+
+      .navbar-collapse.show {
+          left: 0;
+          transition: left 300ms ease-in-out;
+      }
+
+      .navbar-toggler.collapsed~.navbar-collapse {
+          transition: left 500ms ease-in-out;
+      }
+  }
