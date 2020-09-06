@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04-Set-2020 às 01:27
+-- Tempo de geração: 06-Set-2020 às 04:16
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.4.9
 
@@ -157,14 +157,6 @@ CREATE TABLE `perfil` (
   `nome` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `perfil`
---
-
-INSERT INTO `perfil` (`idPerfil`, `nome`) VALUES
-(1, 'Admin'),
-(2, 'Gerente');
-
 -- --------------------------------------------------------
 
 --
@@ -199,7 +191,7 @@ CREATE TABLE `usuario` (
   `telefone` varchar(11) NOT NULL,
   `cep` varchar(8) DEFAULT NULL,
   `login` varchar(15) NOT NULL,
-  `Senha` varchar(15) NOT NULL,
+  `senha` varchar(15) NOT NULL,
   `status` tinyint(4) NOT NULL,
   `email` varchar(100) DEFAULT NULL,
   `idPerfil` int(11) NOT NULL
@@ -365,7 +357,7 @@ ALTER TABLE `fornecedor`
 -- AUTO_INCREMENT de tabela `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `idMenu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idMenu` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `pedido`
@@ -377,7 +369,7 @@ ALTER TABLE `pedido`
 -- AUTO_INCREMENT de tabela `perfil`
 --
 ALTER TABLE `perfil`
-  MODIFY `idPerfil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idPerfil` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
