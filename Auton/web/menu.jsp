@@ -30,7 +30,7 @@
                     <a class="nav-link disabled" href="galeria.html">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">Usuário</a>
+                    <a class="nav-link" href="listar_usuario.jsp">Usuário</a>
                 </li>
             </ul>
         </div>
